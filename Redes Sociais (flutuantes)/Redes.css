@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f0f0;
+    height: 100vh;
+}
+
+.social-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1000;
+}
+
+/* Ícones */
+.social-icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: gray;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulsar 2s infinite;
+    cursor: pointer;
+}
+
+.social-icon a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Efeito pulsar nos ícones */
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Gradiente individual para cada rede */
+#whatsapp {
+    background: linear-gradient(45deg, #75f84d,#2be26e, #0a4e46);
+}
+#instagram {
+    background: linear-gradient(45deg, #ff7c10, #C13584, #b651fa);
+}
+#tiktok {
+    background: linear-gradient(45deg, #000000, #333333, #69C9D0); /* gradiente discreto e elegante */
+}
+
+
+/* Estilo do texto */
+.text {
+    position: absolute;
+    right: 70px;
+    background: #333;
+    padding: 8px 12px;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    animation: aparecer 6s forwards;
+    pointer-events: none;
+}
+
+/* Cascata: atraso diferente para cada rede */
+#whatsapp .text {
+    animation-delay: 0s;
+}
+#instagram .text {
+    animation-delay: 2s;
+}
+#tiktok .text {
+    animation-delay: 4s;
+}
+
+/* Animação padrão dos textos */
+@keyframes aparecer {
+    0% { opacity: 0; transform: translateX(20px); }
+    10% { opacity: 1; transform: translateX(0); }
+    40% { opacity: 1; transform: translateX(0); }
+    50% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 0; }
+}
+
+/* Quando passar o mouse no ícone: remove animação automática e coloca nova sem delay */
+.social-icon:hover .text {
+    animation: none; /* Remove a animação atual */
+    opacity: 1;
+    transform: translateX(0);
+    animation: aparecer-hover 2s forwards; /* Aplica nova animação sem delay */
+}
+
+/* Animação do hover */
+@keyframes aparecer-hover {
+    0% { opacity: 0; transform: translateX(20px); }
+    20% { opacity: 1; transform: translateX(0); }
+    80% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(-20px); }
+}
