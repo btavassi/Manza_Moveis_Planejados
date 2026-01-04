@@ -452,8 +452,8 @@ body {
     animation-delay: 4s;
 }
 
-/
-}
+
+
 
 /* Quando passar o mouse no ícone: remove animação automática e coloca nova sem delay */
 .social-icon:hover .text {
@@ -650,6 +650,7 @@ footer {
     
   
 }
+
 
 
 
