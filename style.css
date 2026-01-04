@@ -685,37 +685,8 @@ footer {
       display: flex;
     }
   }
-    /* Reset básico + ocupar toda a largura em telas grandes */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-width: 100%;
-  overflow-x: hidden;   /* evita scroll horizontal indesejado */
-}
-
-main, .container, .wrapper, #content, div[style*="max-width"], section {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 15px;    /* ← ajuste se quiser um respiro nas bordas */
-  padding-right: 15px;
-}
-
-/* Se houver uma classe .container (muito comum) */
-.container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 15px;
-}
+    
   
 }
+
 
