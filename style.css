@@ -10,11 +10,9 @@ body {
     
     font-family: 'Sweet Sans Pro', sans-serif;
     scroll-behavior: smooth;
-    font-family: 'Sweet Sans Pro', sans-serif;
-    scroll-behavior: smooth;
     overflow-x: hidden;
     width: 100%;
-    overflow-x: hidden; 
+    
 }
 
 /* Galeria */
@@ -693,6 +691,7 @@ footer {
     
   
 }
+
 
 
 
