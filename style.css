@@ -452,31 +452,7 @@ body {
     animation-delay: 4s;
 }
 
-/* Animação padrão dos textos */
-@keyframes aparecer {
-    0% {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-
-    10% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    40% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    50% {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-
-    100% {
-        opacity: 0;
-    }
+/
 }
 
 /* Quando passar o mouse no ícone: remove animação automática e coloca nova sem delay */
@@ -674,6 +650,7 @@ footer {
     
   
 }
+
 
 
 
